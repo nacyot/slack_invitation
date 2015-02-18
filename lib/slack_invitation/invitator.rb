@@ -36,6 +36,9 @@ module SlackInvitation
       @driver.find_element(:id, 'email').send_keys(@admin_email)
       @driver.find_element(:id, 'password').send_keys(@admin_password)
       @driver.find_element(:id, 'signin_btn').click
+      true
+    rescue Selenium::WebDriver::Error::NoSuchElementError
+      false
     end
 
     def send_invitation_mail(email)
