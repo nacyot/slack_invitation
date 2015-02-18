@@ -1,5 +1,7 @@
 # Slack Invitation
 
+[![Gem Version](https://badge.fury.io/rb/slack_invitation.svg)](http://badge.fury.io/rb/slack_invitation)
+
 Slack invitation automation by using selenium. **Now, it only support firefox driver**.
 
 ## Installation
