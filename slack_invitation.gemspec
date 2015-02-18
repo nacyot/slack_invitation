@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version     = SlackInvitation::VERSION
   spec.licenses    = ['MIT']
   spec.platform    = Gem::Platform::RUBY
-  spec.homepage    = 'http://slack.invitation.nacyot.com'
+  spec.homepage    = 'http://slack-invitation.nacyot.com'
   spec.summary     = 'Slack invitation automation using selenium'
   spec.description = 'Slack invitation automation using selenium'
 
