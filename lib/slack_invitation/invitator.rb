@@ -42,6 +42,8 @@ module SlackInvitation
     end
 
     def send_invitation_mail(email)
+      return false if email !~ /@/
+      
       tries ||= 0
       @driver.navigate.to invitation_url
       wait tries
@@ -51,6 +53,7 @@ module SlackInvitation
     rescue Selenium::WebDriver::Error::NoSuchElementError
       wait tries
       retry unless (tries += 1) == 5
+      return false
     end
 
     def test_success
