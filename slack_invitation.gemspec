@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   
   # Dependency
   spec.add_dependency('selenium-webdriver', '~>2')
+  spec.add_dependency('headless', '~>1')
 end

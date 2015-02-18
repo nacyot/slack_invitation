@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    slack_invitation (0.0.1)
+    slack_invitation (0.0.2)
+      headless (~> 1)
       selenium-webdriver (~> 2)
 
 GEM
@@ -10,6 +11,7 @@ GEM
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     ffi (1.9.6)
+    headless (1.0.2)
     multi_json (1.10.1)
     rubyzip (1.1.7)
     selenium-webdriver (2.44.0)

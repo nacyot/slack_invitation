@@ -1,5 +1,6 @@
 require 'selenium-webdriver'
 require 'singleton'
+require 'headless'
 
 module SlackInvitation
   class Invitator
@@ -8,13 +9,27 @@ module SlackInvitation
     attr_writer :team, :admin_email, :admin_password
 
     def initialize
+      @driver = nil
+      @headless = nil
+    end
+    
+    def start
       @driver = Selenium::WebDriver.for :firefox
       target_size = Selenium::WebDriver::Dimension.new(1024, 768)
-      @driver.manage.window.size = target_size
+      @driver.manage.window.size = target_size      
     end
 
     def quit
       @driver.quit
+    end
+
+    def headless_start
+      @headless = Headless.new
+      @headless.start
+    end
+    
+    def headless_destroy
+      @headless.destroy
     end
     
     def invite(email)
