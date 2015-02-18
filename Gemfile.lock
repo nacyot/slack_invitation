@@ -1,0 +1,26 @@
+PATH
+  remote: .
+  specs:
+    slack_invitation (0.0.1)
+      selenium-webdriver (~> 2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    childprocess (0.5.5)
+      ffi (~> 1.0, >= 1.0.11)
+    ffi (1.9.6)
+    multi_json (1.10.1)
+    rubyzip (1.1.7)
+    selenium-webdriver (2.44.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
+    websocket (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  slack_invitation!
