@@ -9,6 +9,8 @@ module SlackInvitation
 
     def initialize
       @driver = Selenium::WebDriver.for :firefox
+      target_size = Selenium::WebDriver::Dimension.new(1024, 768)
+      @driver.manage.window.size = target_size
     end
 
     def quit
@@ -45,7 +47,7 @@ module SlackInvitation
       wait tries
     rescue Selenium::WebDriver::Error::NoSuchElementError
       wait tries
-      retry if (tries += 1) == 5
+      retry unless (tries += 1) == 5
     end
 
     def test_success
